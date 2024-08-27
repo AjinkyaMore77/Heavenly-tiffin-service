@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Heavenly Tiffin Service</title>
+	<script type="text/javascript">
+	function validate()
+        {
+            var f=document.forms[0].elements[0].value;
+            if (f==null || f=="")
+            {
+		document.getElementById("a").innerHTML="<font color=red>Enter Valid First Name</font>";
+		return false;
+            }
+            if (!isNaN(f)) 
+            {
+		document.getElementById("a").innerHTML="<font color=red>Fill Text value for First Name</font>";
+		return false;
+            }
+            var g=document.forms[0].elements[1].value;
+            if (g==null || g=="")
+            {
+		document.getElementById("b").innerHTML="<font color=red>Enter Valid Last Name</font>";
+		return false;
+            }
+            if (!isNaN(g)) 
+            {
+		document.getElementById("b").innerHTML="<font color=red>Fill Text value for Last Name</font>";
+		return false;
+            }
+            var h=document.forms[0].elements[3].value;
+            if (h==null || h=="")
+            {
+		document.getElementById("d").innerHTML="<font color=red>Enter Valid Phone Number</font>";
+		return false;
+            }
+            if (isNaN(h)) 
+            {
+		document.getElementById("d").innerHTML="<font color=red>Fill Numeric value for Phone Number</font>";
+		return false;
+            }
+            if (h.length!=10)
+            {
+		document.getElementById("d").innerHTML="<font color=red>Phone Number must be 10 digits</font>";
+		return false;
+            }
+            var i=document.forms[0].elements[4].value;
+            if (i==null || i=="")
+            {
+		document.getElementById("e").innerHTML="<font color=red>Enter Message</font>";
+		return false;
+            }
+          return true;
+	}
+	</script>
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+section
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #e91e63;/*#112d42*/
+}
+section::before
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: #03a9f4;
+}
+.container
+{
+  position: relative;
+  min-width: 1100px;
+  min-height: 550px;
+  display: flex;
+  z-index: 1000;
+}
+.container .contactInfo
+{
+  position: absolute;
+  top: 40px;
+  width: 350px;
+  height: calc(100% - 80px);
+  background: #e91e63;/*#0f3959;*/
+  z-index: 1;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+}
+.container .contactInfo h2
+{
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+}
+.container .contactInfo ul.info
+{
+   position: relative;
+   margin: 20px 0;
+}
+.container .contactInfo ul.info li
+{
+   position: relative;
+   list-style: none;
+   display: flex;
+   margin: 20px 0;
+   cursor: pointer;
+   align-items: flex-start;
+}
+.container .contactInfo ul.info li span:nth-child(1)
+{
+   width: 30px;
+   min-width: 30px;
+}
+.container .contactInfo ul.info li span:nth-child(1) img
+{
+   max-width: 100%;
+   filter: invert(1);
+}
+.container .contactInfo ul.info li span:nth-child(2)
+{
+   color: #fff;
+   margin-left: 10px;
+   font-weight: 300;
+}
+.container .contactInfo ul.sci
+{
+   position: relative;
+   display: flex;
+}
+.container .contactInfo ul.sci li
+{
+   list-style: none;
+   margin-right: 15px;
+}
+.container .contactInfo ul.sci li a
+{
+   text-decoration: none;
+}
+.container .contactInfo ul.sci li a img
+{
+   filter: invert(1);
+}
+.container .contactForm
+{
+   position: absolute;
+   padding: 70px 50px;
+   padding-left: 250px;
+   margin-left: 150px;
+   width: calc(100% - 150px);
+   height: 100%;
+   background: #fff;
+   box-shadow: 0 50px 50px rgba(0, 0, 0, 0.25);
+}
+.container .contactForm h2
+{
+   color: #0f3959;
+   font-size: 24px;
+   font-weight: 500;
+}
+.container .contactForm .formBox form
+{
+   position: relative;
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   padding-top: 30px;	
+}
+.container .contactForm .formBox form .inputBox
+{
+   position: relative;
+   margin-bottom: 25px;
+}
+.container .contactForm .formBox form .inputBox.w50
+{
+   width: 47%;
+}
+.container .contactForm .formBox form .inputBox.w100
+{
+   width: 100%;
+}
+.container .contactForm .formBox form .inputBox input,
+.container .contactForm .formBox form .inputBox textarea
+{
+   width: 100%;
+   resize: none;
+   padding: 5px 0;
+   font-size: 18px;
+   font-weight: 300;
+   color: #333;
+   border: none;
+   outline: none;
+   border-bottom: 1px solid #777;
+}
+.container .contactForm .formBox form .inputBox textarea
+{
+   height: 120px;
+}
+.container .contactForm .formBox form .inputBox input[type="submit"]
+{
+   height: 40px;
+   margin: 3px 0;
+}
+ .container .contactForm .formBox form .inputBox input[type="submit"]
+{
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 20px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.1s ease;
+   background: linear-gradient(225deg,#e91e63,#03a9f4);
+}
+ .container .contactForm .formBox form .inputBox input[type="submit"]:hover
+{
+  background: linear-gradient(-225deg,#e91e63,#03a9f4);
+}
+</style>
+</head>
+<body>
+<section>
+	<div class="container">
+            <div class="contactInfo">
+		<div>
+                    <h2>Contact Info</h2>
+			<ul class="info">
+
+			<li>
+			<span><img src="mail_img.png"></span>
+			<span>ajinkyamore00@gmail.com</span>
+			</li>
+			<li>
+			<span><img src="call_img.png"></span>
+			<span>937-069-8996</span>
+			</li>
+			</ul>
+		</div>
+                    <ul class="sci">
+			<li><a href="#"><img src="facebook_img.png"></a></li>
+			<li><a href="#"><img src="twitter_img.png"></a></li>
+			<li><a href="#"><img src="instagram_img.png"></a></li>
+			<li><a href="#"><img src="pintrest_img.png"></a></li>
+			<li><a href="#"><img src="linkedIn_img.png"></a></li>
+                    </ul>
+            </div>
+            <div class="contactForm">
+		<h2>Send a Message</h2>
+                    <div class="formBox">
+			<form action="contactinsert.jsp" method="post" onsubmit="return validate()">
+			<div class="inputBox w50">
+				<input type="text" name="fnametxt" placeholder="First Name" >
+				<font size="3"><p id="a"></p></font>
+			</div>
+			<div class="inputBox w50">
+				<input type="text" name="lnametxt" placeholder="Last Name">
+				<font size="3"><p id="b"></p></font>
+			</div>
+			<div class="inputBox w50">
+				<input type="email" name="emailtxt" placeholder="Email Id" required>
+				<font size="3"><p id="c"></p></font>
+			</div>
+			<div class="inputBox w50">
+				<input type="text" name="mnotxt" placeholder="Mobile Number">
+				<font size="3"><p id="d"></p></font>
+			</div>
+			<div class="inputBox w100">
+				<textarea name="msgtxt" placeholder="Write your message here..."></textarea>
+				<font size="3"><p id="e"></p></font>
+			</div>
+			<div class="inputBox w100">
+				<input type="submit" value="Send" name="submit">
+			</div>
+			</form>
+		    </div>
+            </div>
+        </div>
+</section>
+</body>
+</html>

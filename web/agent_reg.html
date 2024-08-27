@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Heavenly Tiffin Service</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    function validate()
+    {
+	var n=document.forms[0].elements[0].value;
+	if (n==null || n=="")
+        {
+            document.getElementById("a").innerHTML="<font color=red>Enter Valid Name</font>";
+            return false;
+	}
+	if (!isNaN(n)) 
+	{
+            document.getElementById("a").innerHTML="<font color=red>Fill Text value for Name</font>";
+            return false;
+	}
+	var o=document.forms[0].elements[1].value;
+	if (o==null || o=="")
+        {
+            document.getElementById("b").innerHTML="<font color=red>Enter Valid Email-id</font>";
+            return false;
+	}
+	var p=document.forms[0].elements[2].value;
+	if (p==null || p=="")
+        {
+            document.getElementById("c").innerHTML="<font color=red>Enter Valid Password</font>";
+            return false;
+	}
+	if (p.length<8) 
+	{
+            document.getElementById("c").innerHTML="<font color=red>Password must be more than 8 digits</font>";
+            return false;		
+	}
+	var q=document.forms[0].elements[3].value;
+	if (q==null || q=="")
+        {
+            document.getElementById("d").innerHTML="<font color=red>Enter Valid Password</font>";
+            return false;
+	}
+        if (q.length<8) 
+	{
+            document.getElementById("d").innerHTML="<font color=red>Password must be more than 8 digits</font>";
+            return false;
+	}
+	if (q!=p) 
+	{
+            document.getElementById("d").innerHTML="<font color=red>Password Mismatch</font>";
+            return false;
+	}
+	var r=document.forms[0].elements[4].value;
+	if (r==null || r=="")
+        {
+            document.getElementById("e").innerHTML="<font color=red>Enter Valid Mobile Number</font>";
+            return false;
+	}
+        if (isNaN(r)) 
+	{
+            document.getElementById("e").innerHTML="<font color=red>Fill Numeric value for Mobile Number</font>";
+            return false;
+	}
+	if (r.length!=10)
+	{
+            document.getElementById("e").innerHTML="<font color=red>Mobile Number must be 10 digits</font>";
+            return false;
+	}
+        var s=document.forms[0].elements[5].value;
+	if (s==null || s=="")
+        {
+            document.getElementById("f").innerHTML="<font color=red>Enter Valid Aadhar Number</font>";
+            return false;
+	}
+        if (isNaN(s)) 
+	{
+            document.getElementById("f").innerHTML="<font color=red>Fill Numeric value for Aadhaar Number</font>";
+            return false;
+	}
+        if (s.length!=12) 
+	{
+            document.getElementById("f").innerHTML="<font color=red>Adhaar Number must be 12 digits</font>";
+            return false;
+	}
+	var t=document.forms[0].elements[6].value;
+	if (t==null || t=="")
+        {
+            document.getElementById("g").innerHTML="<font color=red>Enter Valid Date of Birth</font>";
+            return false;
+	}
+        var u=document.forms[0].elements[9].value;
+        if (u==null || u=="")
+        {
+            document.getElementById("h").innerHTML="<font color=red>Enter Valid City / Town / Village</font>";
+            return false;
+	}
+	if (!isNaN(u)) 
+	{
+            document.getElementById("h").innerHTML="<font color=red>Fill Text value for City / Town / Village</font>";
+            return false;
+	}
+	var v=document.forms[0].elements[10].value;
+	if (v==null || v=="")
+        {
+            document.getElementById("i").innerHTML="<font color=red>Enter Valid PIN Code</font>";
+            return false;
+	}
+        if (isNaN(v)) 
+	{
+            document.getElementById("i").innerHTML="<font color=red>Fill Numeric value for PIN Code</font>";
+            return false;
+	}
+	if (v.length!=6) 
+	{
+            document.getElementById("i").innerHTML="<font color=red>PIN Code must be 6 digits</font>";
+            return false;
+	}
+        var w=document.forms[0].elements[11].value;
+	if (w==null || w=="")
+        {
+            document.getElementById("j").innerHTML="<font color=red>Enter Valid Locality / Sub Locality</font>";
+            return false;
+	}
+	if (!isNaN(w)) 
+	{
+            document.getElementById("j").innerHTML="<font color=red>Fill Text value for Locality / Sub Locality</font>";
+            return false;
+	}
+	var x=document.forms[0].elements[12].value;
+	if (x==null || x=="")
+        {
+            document.getElementById("k").innerHTML="<font color=red>Enter Valid Building No./ Flat No.</font>";
+            return false;
+	}
+	if (isNaN(x)) 
+	{
+            document.getElementById("k").innerHTML="<font color=red>Fill Numeric value for Building No./ Flat No.</font>";
+            return false;
+	}
+	var y=document.forms[0].elements[14].value;
+	if (y==null || y=="")
+        {
+            document.getElementById("l").innerHTML="<font color=red>Enter Valid Transaction Id</font>";
+            return false;
+	}
+	if (isNaN(y)) 
+	{
+            document.getElementById("l").innerHTML="<font color=red>Fill Numeric value for Transaction Id</font>";
+            return false;
+	}
+    return true;		
+ }
+</script>
+<style type="text/css">
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+  height: 115vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(225deg,#e91e63,#03a9f4);
+}
+.container{
+  max-width: 800px;
+  width: 100%;
+  background-color: #fff ;
+  padding: 15px 30px;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+.container .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.container .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background: linear-gradient(225deg,#e91e63,#03a9f4);
+}
+form .button{
+   height: 45px;
+   margin: 5px 0;
+ }
+ form .button input{
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.1s ease;
+   background: linear-gradient(225deg,#e91e63,#03a9f4);
+ }
+ form .button input:hover{
+  background: linear-gradient(-225deg,#e91e63,#03a9f4);
+  }
+ @media(max-width: 584px){
+ .container{
+  max-width: 100%;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="title">Agent Registration</div>
+<form action="agentinsert.jsp" method="post" onsubmit="return validate()">
+    
+        <br>
+        <font size="3" color="#ff66a3">Hey, Enter Your details to get your account!</font>
+        <br><br>
+	<div class="row">
+		<div class="col-lg-4">First Name<font color="#ff0000" size="4"><sup>*</sup></font></div>
+		<div class="col-lg-4">Middle Name<font color="#ff0000" size="4"><sup>*</sup></font></div>
+		<div class="col-lg-4">Last Name<font color="#ff0000" size="4"><sup>*</sup></font></div>
+	</div>
+	<div class="row">
+		<div class="col-lg-12">
+			<input type="text" name="fullnametxt" placeholder="Enter FullName" class="form-control">
+                        <font size="3"><p id="a"></p></font>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-4">Email-id<font color="#ff0000" size="4"><sup>*</sup></font></div>
+		<div class="col-lg-4">Password<font color="#ff0000" size="4"><sup>*</sup></font></div>
+		<div class="col-lg-4">Confirm Password<font color="#ff0000" size="4"><sup>*</sup></font></div>
+	</div>
+	<div class="row">
+		<div class="col-lg-4">
+			<input type="Email" name="emailtxt" placeholder="Enter Email-id" class="form-control" required>
+			<font size="3"><p id="b"></p></font>
+		</div>
+		<div class="col-lg-4">
+			<input type="Password" name="passwordtxt" placeholder="Enter Password" class="form-control">
+			<font size="3"><p id="c"></p></font>
+		</div>
+		<div class="col-lg-4">
+			<input type="Password" name="confirmpasstxt" placeholder="Enter Confirm Password" class="form-control">
+			<font size="3"><p id="d"></p></font>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-4">Mobile Number<font color="#ff0000" size="4"><sup>*</sup></font></div>
+		<div class="col-lg-4">Aadhar Number<font color="#ff0000" size="4"><sup>*</sup></font></div>
+		<div class="col-lg-4">Date of Birth<font color="#ff0000" size="4"><sup>*</sup></font></div>
+	</div>
+	<div class="row">
+		<div class="col-lg-4">
+			<input type="text" name="phonetxt" placeholder="Enter Phone Number" class="form-control">
+			<font size="3"><p id="e"></p></font>
+		</div>
+		<div class="col-lg-4">
+			<input type="text" name="anotxt" placeholder="Enter Aadhar Number" class="form-control">
+			<font size="3"><p id="f"></p></font>
+		</div>
+		<div class="col-lg-4">
+			<input type="date" name="dobtxt" class="form-control">
+			<font size="3"><p id="g"></p></font>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-4">Gender<font color="#ff0000" size="4"><sup>*</sup></font></div>
+		<div class="col-lg-4">State<font color="#ff0000" size="4"><sup>*</sup></font></div>
+		<div class="col-lg-4">City / Town / Village<font color="#ff0000" size="4"><sup>*</sup></font></div>
+	</div>
+	<div class="row">
+		<div class="col-lg-4">
+			<select class="form-control" name="gendertxt">
+				<option>Male</option>
+				<option>Female</option>
+				<option>Transgender</option>
+			</select>
+		</div>
+		<div class="col-lg-4">
+			<select class="form-control" name="statetxt">
+				<option>Andhra Pradesh</option>
+				<option>Arunachal Pradesh</option>
+				<option>Assam</option>
+				<option>Andaman and Nicobar Islands</option>
+				<option>Bihar</option>
+				<option>Chhattisgarh</option>
+				<option>Chandigarh</option>
+				<option>Dadra and Nagar Haveli</option>
+				<option>Daman and Diu</option>
+				<option>Delhi</option>
+				<option>Goa</option>
+				<option>Gujarat</option>
+				<option>Haryana</option>
+				<option>Himachal Pradesh</option>
+				<option>Jammu and Kashmir</option>
+				<option>Jharkhand</option>
+				<option>Karnataka</option>
+				<option>Kerala</option>
+				<option>Lakshadweep</option>
+				<option>Madhya Pradesh</option>
+				<option>Maharashtra</option>
+				<option>Manipur</option>
+				<option>Meghalaya</option>
+				<option>Mizoram</option>
+				<option>Nagaland</option>
+				<option>Odisha</option>
+				<option>Punjab</option>
+				<option>Pondicherry</option>
+				<option>Rajasthan</option>
+				<option>Sikkim</option>
+				<option>Tamil Nadu</option>
+				<option>Telangana</option>
+				<option>Tripura</option>
+				<option>Uttar Pradesh</option>
+				<option>Uttarakhand</option>
+				<option>West Bengal</option>
+			</select>
+		</div>
+		<div class="col-lg-4">
+			<input type="text" name="ctvtxt" placeholder="Enter City/Town/Village" class="form-control">
+			<font size="3"><p id="h"></p></font>
+		</div>	</div>
+	<div class="row">
+		<div class="col-lg-4">PIN Code<font color="#ff0000" size="4"><sup>*</sup></font></div>
+		<div class="col-lg-4">Locality / Sub Locality<font color="#ff0000" size="4"><sup>*</sup></font></div>
+                <div class="col-lg-4">Building No. / Flat No.<font color="#ff0000" size="4"><sup>*</sup></font></div>	
+        </div>
+	<div class="row">
+		<div class="col-lg-4">
+			<input type="text" name="pincodetxt" placeholder="Enter PIN Code" class="form-control">
+			<font size="3"><p id="i"></p></font>
+		</div>
+		<div class="col-lg-4">
+			<input type="text" name="lsltxt" placeholder="Enter Locality/Sub Locality" class="form-control">
+			<font size="3"><p id="j"></p></font>
+		</div>
+                <div class="col-lg-4">
+			<input type="text" name="bfnotxt" placeholder="Enter Building No. / Flat No." class="form-control">
+			<font size="3"><p id="k"></p></font>
+		</div>
+	</div>
+        <div class="title">Payment Details</div>
+	<br>
+	<div class="row">
+		<div class="col-lg-4">Payment Type<font color="#ff0000" size="4"><sup>*</sup></font></div>
+		<div class="col-lg-4">Transaction Id<font color="#ff0000" size="4"><sup>*</sup></font></div>
+		<div class="col-lg-4">Registration Charges</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-4">
+			<select class="form-control" name="payment">
+				<option>GPay</option>
+				<option>PhonePe</option>
+				<option>Paytm</option>
+                                <option>Amazon Pay</option>
+			</select>
+		</div>
+		<div class="col-lg-4">
+			<input type="text" name="transtxt" placeholder="Enter Transaction Id" class="form-control">
+			<font size="3"><p id="l"></p></font>
+		</div>
+		<div class="col-lg-4">
+			<input type="text" name="Regischargetxt" value="500" class="form-control" readonly>
+		</div>
+	</div>
+	<span><font size="3" color="#e91e63">&copy;All Kinds of payment accepted on 8999213780</font></span>
+	<div class="row">
+		<div class="col-lg-4">
+			<div class="button">
+			<input type="submit" name="submit" value="Submit">
+			</div>
+		</div>
+		<div class="col-lg-4">
+			<div class="button">
+			<input type="reset" name="reset" value="Reset">
+			</div>
+		</div>
+		<div class="col-lg-4">
+			<div class="button">
+				<input type="button" onclick="document.location='body2.html'" name="dashboard" value="Dashboard">
+			</div>
+		</div>
+</form>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Heavenly Tiffin Service</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(225deg,#e91e63,#03a9f4);
+}
+.container
+{
+  max-width: 1160px;
+  width: 100%;
+  background-color: #fff ;
+  padding: 0px 18px;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+.banner-card
+{
+    position: relative;
+}
+.banner-text
+{
+    position: absolute;
+    top: 20px;
+    padding: 15px;
+}
+.banner-text h4
+{
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #336699;
+}
+.banner-text p
+{
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+.banner-text .button {
+  border-radius: 4px;
+  background: linear-gradient(225deg,#e91e63,#03a9f4);
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  padding: 5px;
+  width: 130px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.banner-text .button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.banner-text .button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.banner-text .button:hover span {
+  padding-right: 25px;
+}
+.banner-text .button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+/*.banner-card .box
+{
+	width: 500px;
+	height: 100px;
+}*/
+.one
+{
+    -webkit-animation-delay:  1s;
+    -moz-animation-delay: 1s;
+    animation-delay: 1s;
+}
+.animate
+{
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+}
+@-webkit-keyframes fadeUp
+{
+    from
+    {
+	opacity: 0;
+	-webkit-transform: translate3d(0, 100%, 0);
+	transform: translate3d(0, 100%, 0);
+    }
+    to
+    {
+	opacity: 1;
+	-webkit-transform: none;
+	transform: none;
+    }
+}
+.fadeUp
+{
+    -webkit-animation-name: fadeUp;
+    animation-name: fadeUp;
+}
+.title
+{
+  font-size: 30px;
+  font-weight: 500;
+  position: relative;
+}
+.title::before
+{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 35px;
+  border-radius: 5px;
+  background: linear-gradient(225deg,#e91e63,#03a9f4);
+}
+.button{
+   height: 45px;
+   margin: 5px 0;
+ }
+ .button input{
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.1s ease;
+   background: linear-gradient(225deg,#e91e63,#03a9f4);
+ }
+ .button input:hover{
+  background: linear-gradient(-225deg,#e91e63,#03a9f4);
+  }
+ @media(max-width: 584px){
+ .container{
+  max-width: 100%;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<form action="agentlogin.jsp" method="post" onsubmit="return validate()">
+    <div class="row">
+	<div class="col-lg-6">
+            <div class="banner-card">
+		<img src="login.jpg" width="570" height="590">
+                    <div class="wrapper">
+			<div class="banner-text">
+                            <div class="box one animate fadeUp">
+				<h4>Hello! Welcome</h4>
+                                <p>Doesn't have an account? </p>
+                                <button class="button" onclick="document.location='agent_reg.html'"><span>Register Now </span></button>
+                            </div>
+			</div>
+                    </div>
+            </div>
+	</div>
+	<div class="col-lg-6"></div>
+	<div class="row">
+	<br><br><br><br>
+		<div class="col-lg-6"></div>
+		<div class="col-lg-6">
+			<div class="title">Agent Login</div>
+		<br><br>
+		<font size="4" color="#c2c2a3">----------&nbsp;&nbsp;Login with Email / Username&nbsp;&nbsp;---------</font>
+		<br><br>
+                    <h4>Username<font color="#ff0000"><sup>*</sup></font></h4></div>
+		<br>
+		<div class="col-lg-6"></div>	
+		<div class="col-lg-5">
+                    <input type="email" name="usertxt" placeholder="Enter Username" class="form-control" required>
+		</div>
+	<br>
+	<div class="col-lg-6"></div>
+	<div class="col-lg-5"></div>
+	<br>
+		<div class="col-lg-6"></div>
+		<div class="col-lg-5">
+                    <h4>Password<font color="#ff0000"><sup>*</sup></font></h4>
+                </div>
+	<br>
+		<div class="col-lg-6"></div>
+		<div class="col-lg-5">
+                    <input type="Password" name="passwordtxt" placeholder="Enter Password" class="form-control" pattern=".{8,}" title="Password must be 8 or more digits" required>
+		</div>
+	<br>
+	<div class="col-lg-6"></div>
+	<div class="col-lg-5"></div>
+	<br><br><br><br><br><br><br><br><br><br>
+		<div class="col-lg-6"></div>
+		<div class="col-lg-6">
+			<div class="col-lg-10">
+				<div class="button">
+				<input type="submit" name="submit" value="Login">
+				</div>
+			</div>
+		</div>
+		<br><br><br>
+		<div class="col-lg-6"></div>
+		<div class="col-lg-6">
+				<div class="col-lg-10">
+				<font size="4"><a href="body2.html">Forgot Password?</a></font>
+			</div>
+		</div>
+
+	</div>
+</form>
+</div>
+</body>
+</html>

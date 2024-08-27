@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        .navbar-header
+        {
+            /*width: 100%;
+            margin: auto;*/
+            padding: 1px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo
+        {
+            cursor: pointer;
+        }
+        .navbar-header ul li
+        {
+            list-style: none;
+            display: inline-block;
+            margin: 0 15px;
+            position: relative;
+        }
+        .navbar-header ul li a
+        {
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        .navbar-header ul li::after
+        {
+            content: '';
+            height: 3px;
+            width: 0;
+            background: linear-gradient(225deg,#e91e63,#03a9f4);/*#009688*/
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            transition: 0.5s;
+        }
+        .navbar-header ul li:hover::after
+        {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <img src="hts.png" height="80" width="250" class="logo">
+        <ul>
+            <li class="active"><a href="body.html" target="b">Home</a></li>
+            <li><a href="about_us.html" target="b">about Us</a></li>
+            <li><a href="contact_us.html" target="b">Contact Us</a></li>
+            <!--<li><a href="customer_reg.html" target="b">Customer Registration</a></li>
+            <li><a href="agent_reg.html" target="b">Agent Registration</a></li>-->
+        <!--</ul>
+        <ul class="nav navbar-right">-->
+            <li><a href="customer_login.html" target="b">Customer Login</a></li>
+            <li><a href="agent_login.html" target="b">Agent Login</a></li>
+            <li><a href="admin_login.html" target="b">Admin Login</a></li>
+        </ul>
+    </div>
+</div>
+</nav>
+</body>
+</html>
